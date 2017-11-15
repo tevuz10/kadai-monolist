@@ -54,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # USer ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rakuten_web_service' , '1.5.0'
+
+gem 'dotenv-rails'
