@@ -1,4 +1,4 @@
-class ItemController < ApplicationController
+class ItemsController < ApplicationController
   before_action :require_user_logged_in
   
   def new
@@ -18,9 +18,10 @@ class ItemController < ApplicationController
       end
     end
   end
-  
+
   def show
     @item = Item.find(params[:id])
     @want_users = @item.want_users
   end
+
 end

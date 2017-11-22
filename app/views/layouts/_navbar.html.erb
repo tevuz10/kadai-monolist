@@ -14,12 +14,10 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <a href="#">
-                <%= link_to new_item_path do %>
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                  アイテムを追加
-                <% end %>
-              </a>
+              <%= link_to new_item_path do %>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                アイテムを追加
+              <% end %>
             </li>
             
             <li class="dropdown">
@@ -36,14 +34,15 @@
                 </li>
                 <li role="separator" class="divider"></li>
                 <li>
-                  <a href="#">ログアウト</a>
+                  <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
                 </li>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to '新規登録', signup_path %></li>
-            <li><%= link_to 'ログイン', login_path %></li>
-            <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to '新規登録', signup_path %></li>
+              <li><%= link_to 'ログイン', login_path %></li>
+            </ul>
           <% end %>
         </ul>
       </div>
